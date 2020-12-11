@@ -3,14 +3,14 @@ import db
     
 app = FastAPI()
 
-@app.get("/registro/balance/{id}")
-async def obtener_balance(id : int):
+@app.get("/registro/balance/{id_usuario}")
+async def obtener_balance(id_usuario : int):
     registros = db.obtener_registros()
     lista_final = []
     ingresos = []
     egresos = []
     for i in range(len(registros)):
-        if registros[i].id_usuario == id:
+        if registros[i].id_usuario == id_usuario:
            lista_final.append(registros[i])
     
     for i in range(len(lista_final)):
