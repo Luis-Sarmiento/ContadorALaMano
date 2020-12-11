@@ -20,3 +20,11 @@ async def obtener_balance(id : int):
             egresos.append(lista_final[i].valor)
 
     return {"data":lista_final, "balance":sum(ingresos)-sum(egresos)}
+
+@app.post("/registro/")
+async def crear_registro(registro: db.Registro):
+    creado_exitosamente = db.crear_registro(registro)
+    if creado_exitosamente:
+        return {"mensaje: Registro creado exitosamente"}
+    else:
+        raise HTTPException(status_code=400, detail="Error, la ID ya se encuentra registrada")
