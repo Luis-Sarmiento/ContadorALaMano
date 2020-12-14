@@ -11,8 +11,7 @@ async def obtener_balance(id_usuario : int):
     egresos = []
     for i in range(len(registros)):
         if registros[i].id_usuario == id_usuario:
-           lista_final.append(registros[i])
-    
+           lista_final.append(registros[i])       
     for i in range(len(lista_final)):
         if lista_final[i].tipo == "ingreso":
             ingresos.append(lista_final[i].valor)
