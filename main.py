@@ -1,7 +1,25 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+import datetime
 import db
     
 app = FastAPI()
+
+origins = [
+    "http://localhost",
+    "http://localhost:8081",
+    "http://localhost:8080",
+    "http://contador-ala-mano.herokuapp.com"
+]
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = origins,
+    allow_credentials = True,
+    allow_methods = ["*"],
+    allow_headers = ["*"],
+)
 
 @app.get("/registro/balance/{id_usuario}")
 async def obtener_balance(id_usuario : int):
