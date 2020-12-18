@@ -11,6 +11,7 @@ origins = [
     "http://localhost:8080",
     "https://contador-ala-mano.herokuapp.com"
     "https://contador-a-la-mano-app.herokuapp.com"
+    "https://contador-ala-mano-app.herokuapp.com"
 ]
 
 
