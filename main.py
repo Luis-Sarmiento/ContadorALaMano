@@ -9,7 +9,7 @@ origins = [
     "http://localhost",
     "http://localhost:8081",
     "http://localhost:8080",
-    "http://contador-ala-mano.herokuapp.com",
+    "https://contador-ala-mano-app.herokuapp.com",
     "https://contador-ala-mano-front.herokuapp.com",
     "https://contador-a-la-mano-app.herokuapp.com"
 ]
